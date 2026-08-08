@@ -236,6 +236,24 @@ main, header, footer { position: relative; z-index: 2; }
 .check-list li::before { content: '—'; position: absolute; left: 0; color: var(--gray-1); }
 .goal { color: var(--white) !important; font-size: 16px; }
 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 64px;
+}
+.stat-card {
+  background: var(--black);
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.stat-num { font-family: var(--ff-display); font-size: clamp(30px, 4vw, 44px); font-weight: 600; }
+.stat-card p { font-size: 14px; color: var(--gray-1); }
+
 /* ---------- Services ---------- */
 .service-list { border-top: 1px solid var(--border); }
 .service-row {
@@ -375,6 +393,7 @@ main, header, footer { position: relative; z-index: 2; }
   .menu-toggle { display: flex; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .check-list { grid-template-columns: 1fr; }
   .service-row { grid-template-columns: 1fr; gap: 12px; }
 }
